@@ -1,0 +1,7 @@
+requests        # HTTP client for CoinGecko API
+PySide6         # Qt-based GUI
+transformers    # HuggingFace sentiment-analysis pipeline
+torch>=1.13.1   # required by transformers
+python-dotenv   # load environment variables (Discord webhook, API keys)
+praw            # Reddit API client
+tweepy          # Twitter (X) API client

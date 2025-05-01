@@ -1,0 +1,108 @@
+
+QWidget {
+    background-color: #1C1C1C;
+    color: #E0E0E0;
+}
+
+
+
+QListWidget, QLineEdit {
+    background-color: #232B2B;
+    border: 1px solid #4A4A4A;
+    border-radius: 6px;
+    padding: 6px;
+    color: #E0E0E0;
+}
+
+
+QListWidget::item {
+    background-color: #455a64;
+    border-radius: 6px;
+    margin: 4px;
+    padding: 8px;
+    color: white;
+    min-height: 48px;
+    outline: none;
+}
+
+
+QListWidget::item:hover {
+    background-color: #546e7a;
+}
+
+
+QListWidget::item:selected {
+    background-color: #546e7a;
+}
+
+
+QListWidget::item:focus {
+    border: none;
+    outline: none;
+}
+
+QListWidget::item:selected:focus {
+    border: none;
+    outline: none;
+    background-color: #546e7a;
+}
+
+
+QListWidget::item:selected QIcon,
+QListWidget::item:hover QIcon {
+
+}
+
+
+QListWidget#watchlist::item {
+    font-size: 16pt;
+}
+
+
+QPushButton {
+    background-color: #3A4D5A;
+    border: 2px solid #607D8B;
+    border-radius: 12px;
+    padding: 8px 16px;
+    color: #F0F0F0;
+    font-weight: bold;
+}
+
+QPushButton:hover {
+    background-color: #4C6373;
+    border: 2px solid #90A4AE;
+}
+
+QPushButton:pressed {
+    background-color: #2C3B47;
+    border: 2px solid #78909C;
+}
+
+
+QLabel {
+    background-color: #1A1A1A;
+    font-weight: bold;
+    color: #E0E0E0;
+}
+
+
+QScrollBar:vertical {
+    background: #1C1C1C;
+    width: 12px;
+    margin: 0px;
+    border-radius: 6px;
+}
+
+QScrollBar::handle:vertical {
+    background: #3A3A3A;
+    min-height: 20px;
+    border-radius: 6px;
+}
+
+
+#sidebar {
+    background-color: #1A1A1A;
+    border: 2px solid #444C50;
+    border-radius: 20px;
+    padding: 10px;
+}

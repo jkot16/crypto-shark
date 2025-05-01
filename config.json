@@ -1,0 +1,13 @@
+{
+  "tickers": [
+    "bitcoin",
+    "ethereum",
+    "chainlink",
+    "bittensor",
+    "ondo-finance"
+  ],
+  "thresholds": {
+    "pct": 0.0,
+    "sentiment": 0.0
+  }
+}
