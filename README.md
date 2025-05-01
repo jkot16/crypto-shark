@@ -2,7 +2,7 @@
 
 [![Python](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
 
-![CryptoShark GUI Preview](https://github.com/user-attachments/assets/bfdb3e2c-8efd-4105-99ad-147fb7926329)
+![CryptoShark GUI Preview](https://github.com/user-attachments/assets/dc58565b-148c-40a8-bd33-23d460fc651f)
 
 ---
 
