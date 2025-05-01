@@ -132,7 +132,8 @@ What happens:
 - Scrape Reddit comments + recent tweets for watched coins
 - Use Hugging Face sentiment model to classify messages
 - Trigger Discord alert when:
-- Price change ≥ configured % AND negative sentiment ≥ threshold
+  - Price change ≥ configured %
+  - AND negative sentiment ≥ threshold
 - Logs saved to logs.txt and viewable in the GUI.
 
 
