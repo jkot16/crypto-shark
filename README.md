@@ -1,6 +1,7 @@
 ## CryptoShark
 
-[![Python](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
+[![Python](https://img.shields.io/badge/python-3.11+-blue.svg)](https://www.python.org/downloads/release/python-3110/)
+
 
 ![CryptoShark GUI Preview](https://github.com/user-attachments/assets/dc58565b-148c-40a8-bd33-23d460fc651f)
 
@@ -47,7 +48,7 @@ Whether you're a trader, analyst, or just crypto-curious – CryptoShark helps y
 
 | Component         | Technology                                  |
 |------------------|---------------------------------------------|
-| Language          | Python 3.8+                                 |
+| Language          | Python 3.11+                                 |
 | GUI               | PySide6 (Qt6)                               |
 | APIs              | CoinGecko, Reddit (PRAW), Twitter (Tweepy)  |
 | AI/NLP            | HuggingFace Transformers (DistilBERT)       |
