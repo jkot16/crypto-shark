@@ -1,0 +1,9 @@
+{
+  "tickers": [
+
+  ],
+  "thresholds": {
+    "pct": 0.0,
+    "sentiment": 0.0
+  }
+}
