@@ -6,3 +6,4 @@ __pycache__/
 logs.txt
 coins_cache.json
 state.json
+config.json

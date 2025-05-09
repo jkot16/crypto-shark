@@ -15,8 +15,8 @@ from PySide6.QtWidgets import (
 from PySide6.QtCore import Qt, QSize, QRunnable, Slot, QThreadPool, Signal
 from PySide6.QtGui import QPixmap, QIcon, QFontDatabase, QFont
 
-from dialogs import AddCryptoDialog
-from logic import CryptoWatcherLogic
+from crypto_shark.dialogs import AddCryptoDialog
+from crypto_shark.logic import CryptoWatcherLogic
 
 
 BASE_DIR    = Path(__file__).resolve().parent.parent
