@@ -19,16 +19,16 @@ from crypto_shark.dialogs import AddCryptoDialog
 from crypto_shark.logic import CryptoWatcherLogic
 
 
-BASE_DIR    = Path(__file__).resolve().parent.parent
-CONFIG      = BASE_DIR / "config.json"
-CACHE_FILE  = BASE_DIR / "coins_cache.json"
-LOG_FILE    = BASE_DIR / "logs.txt"
-STYLE_QSS   = BASE_DIR / "style.qss"
-ICONS_DIR   = BASE_DIR / "icons"
-FONTS_DIR   = BASE_DIR / "fonts"
+BASE_DIR = Path(__file__).resolve().parent.parent
+CONFIG = BASE_DIR / "config.json"
+CACHE_FILE = BASE_DIR / "coins_cache.json"
+LOG_FILE = BASE_DIR / "logs.txt"
+STYLE_QSS = BASE_DIR / "style.qss"
+ICONS_DIR = BASE_DIR / "icons"
+FONTS_DIR = BASE_DIR / "fonts"
 
-CACHE_TTL   = 3600
-ICON_SZ     = 48
+CACHE_TTL = 3600
+ICON_SZ = 48
 
 
 class IconLoader(QRunnable):
@@ -61,7 +61,7 @@ class CheckWorker(QRunnable):
 
 
 class CryptoWatcherGUI(QWidget):
-    icon_ready  = Signal(int, QPixmap)
+    icon_ready = Signal(int, QPixmap)
     checks_done = Signal(list)
 
     def __init__(self, rajdhani_family: str, comforter_family: str):

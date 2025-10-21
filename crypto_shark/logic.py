@@ -11,11 +11,11 @@ import praw
 import tweepy
 
 
-BASE_DIR    = Path(__file__).resolve().parent.parent
-CONFIG      = BASE_DIR / "config.json"
-STATE_FILE  = BASE_DIR / "state.json"
-CACHE_FILE  = BASE_DIR / "coins_cache.json"
-LOG_FILE    = BASE_DIR / "logs.txt"
+BASE_DIR = Path(__file__).resolve().parent.parent
+CONFIG = BASE_DIR / "config.json"
+STATE_FILE = BASE_DIR / "state.json"
+CACHE_FILE = BASE_DIR / "coins_cache.json"
+LOG_FILE = BASE_DIR / "logs.txt"
 
 
 ALIASES = {
@@ -39,7 +39,7 @@ class CryptoWatcherLogic:
 
         self.config_path = CONFIG
         self.state_path  = STATE_FILE
-        self.state       = self._load_json(self.state_path) or {}
+        self.state = self._load_json(self.state_path) or {}
 
         self.webhook_url = os.getenv("DISCORD_WEBHOOK_URL")
         if not self.webhook_url:
@@ -137,14 +137,14 @@ class CryptoWatcherLogic:
         requests.post(self.webhook_url, json=payload, timeout=5).raise_for_status()
 
     def run_checks(self):
-        cfg     = self._load_json(self.config_path) or {}
+        cfg = self._load_json(self.config_path) or {}
         tickers = cfg.get("tickers", [])
         messages = []
 
-        reddit_texts  = self.get_comments(limit=1000)
-        query         = " OR ".join(f"#{c}" for c in tickers) + " -is:retweet lang:en"
+        reddit_texts = self.get_comments(limit=1000)
+        query = " OR ".join(f"#{c}" for c in tickers) + " -is:retweet lang:en"
         twitter_texts = self.get_tweets(query=query, max_results=100)
-        all_texts     = reddit_texts + twitter_texts
+        all_texts = reddit_texts + twitter_texts
 
         try:
             prices = self.get_prices_batch(tickers)
@@ -153,16 +153,16 @@ class CryptoWatcherLogic:
 
         for coin in tickers:
             price = prices.get(coin, 0.0)
-            prev  = self.state.get(coin, {}).get("last_price")
-            pct   = ((price - prev) / prev * 100) if prev else None
+            prev = self.state.get(coin, {}).get("last_price")
+            pct = ((price - prev) / prev * 100) if prev else None
 
-            aliases    = ALIASES.get(coin, [coin])
+            aliases = ALIASES.get(coin, [coin])
             coin_texts = [t for t in all_texts if any(a.lower() in t.lower() for a in aliases)]
             count_msgs = len(coin_texts)
 
             if coin_texts:
                 results  = self.analyze_sentiment(coin_texts)
-                total    = len(results)
+                total = len(results)
                 pos_list = [r for r in results if r["label"] == "POSITIVE"]
                 neg_list = [r for r in results if r["label"] == "NEGATIVE"]
                 pct_pos  = len(pos_list)/total if total else 0.0
@@ -177,8 +177,8 @@ class CryptoWatcherLogic:
             messages.append(line)
 
             cache = self._load_json(CACHE_FILE)
-            obj   = next((c for c in cache if c["id"] == coin), {})
-            img   = obj.get("image", "")
+            obj = next((c for c in cache if c["id"] == coin), {})
+            img = obj.get("image", "")
 
             alert_flag = 0
             if pct is not None and abs(pct) >= self.th_pct and pct_neg >= self.th_sent:

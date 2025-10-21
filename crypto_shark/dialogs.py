@@ -1,8 +1,8 @@
 
 import requests
 
-from PySide6.QtCore    import Qt, QRunnable, Slot, QThreadPool, Signal, QSize
-from PySide6.QtGui     import QPixmap, QIcon
+from PySide6.QtCore import Qt, QRunnable, Slot, QThreadPool, Signal, QSize
+from PySide6.QtGui import QPixmap, QIcon
 from PySide6.QtWidgets import (
     QDialog, QScrollArea, QWidget, QGridLayout,
     QVBoxLayout, QPushButton, QLabel, QSizePolicy
@@ -43,7 +43,7 @@ class AddCryptoDialog(QDialog):
         layout.addWidget(scroll)
 
         container = QWidget()
-        grid      = QGridLayout(container)
+        grid = QGridLayout(container)
         scroll.setWidget(container)
 
 
@@ -61,8 +61,7 @@ class AddCryptoDialog(QDialog):
             frame.setStyleSheet("""
                 background-color: #3A4D5A;
                 border: 2px solid #607D8B;
-                border-radius: 8px;
-            """)
+                border-radius: 8px;""")
 
             btn = QPushButton()
             btn.setFixedSize(64,64)
