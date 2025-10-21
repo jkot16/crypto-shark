@@ -26,14 +26,14 @@ class IconLoader(QRunnable):
 
 class AddCryptoDialog(QDialog):
 
-    icon_ready = Signal(object, object)  # (QPushButton, QIcon)
+    icon_ready = Signal(object, object)
 
     def __init__(self, parent=None, coins=None):
         super().__init__(parent)
         self.setWindowTitle("Add Crypto")
         self.resize(800,600)
         self.selected = None
-        self.coins    = coins or []
+        self.coins = coins or []
 
 
         layout = QVBoxLayout(self)

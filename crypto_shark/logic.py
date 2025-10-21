@@ -19,10 +19,10 @@ LOG_FILE = BASE_DIR / "logs.txt"
 
 
 ALIASES = {
-    "bitcoin":   ["bitcoin", "btc"],
-    "ethereum":  ["ethereum", "eth"],
-    "ripple":    ["ripple", "xrp"],
-    "solana":    ["solana", "sol"],
+    "bitcoin": ["bitcoin", "btc"],
+    "ethereum": ["ethereum", "eth"],
+    "ripple":  ["ripple", "xrp"],
+    "solana":  ["solana", "sol"],
     "chainlink": ["chainlink", "link"],
 
 }
@@ -102,7 +102,7 @@ class CryptoWatcherLogic:
             self._pipeline = hf_pipeline(
                 "sentiment-analysis",
                 model="distilbert-base-uncased-finetuned-sst-2-english",
-                device=-1  # CPU
+                device=-1
             )
 
 
